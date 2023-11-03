@@ -19,7 +19,7 @@ export const ChatBotComponent = () => {
       console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&", res);
       setTimeout(() => setData(res?.data[0]?.data), 1000);
     } catch (e) {
-      console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&", e);
+      console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&", e);
     }
   };
 
