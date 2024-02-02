@@ -26,6 +26,12 @@
     }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .loader-zoom {
   animation: zoom 2000s infinite linear;
   transform: scale(2);
@@ -38,4 +44,11 @@
   to {
       transform:scale(2);
   }
+}
+
+
+::selection {
+  color: yellow;
+  background: red;
+  mix-blend-mode: luminosity;
 }

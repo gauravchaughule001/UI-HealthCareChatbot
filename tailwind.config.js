@@ -14,7 +14,10 @@ module.exports = {
       },
     },
     screens: {
-      'xs': '375px',
+
+      '2xs':'0px',
+
+      'xs': '374px',
       // => @media (min-width: 430px) { ... }
 
       'sm': '640px',
@@ -33,5 +36,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     }
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 }

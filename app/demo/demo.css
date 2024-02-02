@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.earth-orange{
+    background: rgb(56,56,66);
+background: linear-gradient(180deg, rgb(255, 60, 0) 0%, rgba(255, 60, 0, 0.5) 40%,  rgba(0,0,0,1) 100%);
+ mix-blend-mode: overlay;
+}
+
+.earth-black{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255, 60, 0, 0.5) 100%);
+     mix-blend-mode: hard-light;
+     z-index: 3000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.open{
+    width: 100%;
+    animation: openslider 0.5s ease-out;
+}
+.close{
+    width: 20%;
+    animation: closeslider 0.5s ease-out;
+}
+
+@keyframes openslider {
+    from{
+        width: 20%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes closeslider {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 20%;
+    }
+}
+
+.universe-text{
+    transform: scale(1);
+    animation: zoom 1s infinite;
+}
+
+@keyframes zoom {
+    0%{
+    transform: scale(0.4);
+    }
+    30%{
+    transform: scale(1.2);
+    }
+    40%{
+    transform: scale(1);
+    }
+    80%{
+    transform: scale(1.2);
+    }
+    100%{
+    transform: scale(1);
+    }
+}
+
+.my-text{
+    font-family: 'Calligraffitti', cursive;
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    translate: calc(50%, 50%);
+}
+
+.my-text-shadow{
+    text-shadow: 2px 2px #FF0000;
+    font-family: 'Calligraffitti', cursive;
+    font-size: 10rem;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    translate: calc(50%, 50%);
+    filter: blur(10px);
+    color: red;
+}

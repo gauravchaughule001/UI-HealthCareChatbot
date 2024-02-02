@@ -1,0 +1,149 @@
+.slide-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 600px;
+    z-index: 99999;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, 0.2);
+    translate: -550px 0;
+}
+
+.smooth-slide {
+    animation: showSlider 0.75s ease-out;
+    translate: 0 0;
+    box-shadow: 10px 0px 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes showSlider {
+    from {
+        box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, 0.2);
+        translate: -550px 0;
+    }
+
+    to {
+        box-shadow: 10px 0px 30px 0 rgba(0, 0, 0, 0.5);
+        translate: 0 0;
+    }
+}
+
+.smooth-slide-closed {
+    position: absolute;
+    left: 0;
+    animation: showSliderClosed 0.5s ease-out;
+    translate: -550px 0;
+}
+
+@keyframes showSliderClosed {
+    from {
+        box-shadow: 10px 0px 30px 0 rgba(0, 0, 0, 0.5);
+
+        translate: 0 0;
+    }
+
+    to {
+        translate: -550px 0;
+        box-shadow: 10px 0px 10px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+}
+
+.icon-show {
+    opacity: 1;
+    animation: showIcon 0.25s ease-in;
+}
+
+@keyframes showIcon {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.icon-hide {
+    opacity: 1;
+    animation: hideIcon 0.25s ease-in;
+}
+
+@keyframes hideIcon {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+input[type=file] {
+    height: 160px;
+    width: 160px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prof-pic-change-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: showChangePicture 0.3s ease-out;
+    opacity: 1;
+}
+
+.prof-pic-change{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prof-pic-change-hidden {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: hideChangePicture 0.3s ease-in;
+    opacity: 0;
+}
+
+@keyframes showChangePicture {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hideChangePicture {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+input[type=file]:hover,
+input[type=file]::before {
+    content: "Change Profile Picture";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    z-index: inherit;
+    cursor: pointer;
+}
